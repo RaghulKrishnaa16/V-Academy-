@@ -1,0 +1,113 @@
+<nav id="main-navbar" class="navbar navbar-fixed-top">
+	<div class="container-fluid">
+
+		<div class="navbar-header">
+			<button type="button" class="navbar-toggle" data-toggle="collapse"
+				data-target="#myNavbar">
+				<span class="icon-bar"></span> <span class="icon-bar"></span> <span
+					class="icon-bar"></span> <span class="icon-bar"></span>
+			</button>
+		</div>
+
+		<div class="collapse navbar-collapse" id="myNavbar">
+			<ul class="nav navbar-nav msk-navbar navbar-capitalized">
+				<li><font style="text-align: center; font-size: 23px;">V-ACADEMY</font></li>
+			</ul>
+			<ul class="nav navbar-nav navbar-right">
+				<li>
+					<form id="login-form" class="msk-main-form msk-navbar-form">
+						<div class="row">
+							<div class="col-sm-3">
+								<label for="email">Username</label> <input id="login-username"
+									ng-model="user.username" type="username" data-trigger="focus"
+									class="required navbar-elements form-control" />
+							</div>
+							<div class="col-sm-3">
+								<label for="password">Password</label> <input
+									id="login-password" ng-model="user.password" type="password"
+									data-trigger="focus"
+									class="required navbar-elements form-control" />
+							</div>
+							<div class="col-sm-3">
+								<label for="role">Role</label> <select id="login-role"
+									ng-model="user.roleType" ng-init="user.roleType='student'"
+									ng-options="x for x in ['student', 'faculty', 'administrator']"
+									class="capitalized-text required navbar-elements form-control">
+								</select>
+							</div>
+
+
+							<div class="col-sm-3">
+								<a
+									class="btn btn-primary pc-btn btn-block navbar-elements navbar-login"
+									ng-click="model.login(user)">Login</a>
+							</div>
+						</div>
+						<div class="row">
+							<div ng-show="model.errorMessage" class="ng-hide" role="alert"
+								style="color: blue; text-align: center; font-size: 15px; padding-top: 1vh; padding-bottom: 4px">
+								<!--   class="alert alert-danger"-->
+								<span
+									class="glyphicon glyphicon-exclamation-sign msk-msg-glyphicon"
+									aria-hidden="true"></span> <span class="sr-only">Error:
+								</span> {{model.errorMessage}}
+							</div>
+						</div>
+
+					</form>
+				</li>
+			</ul>
+		</div>
+	</div>
+</nav>
+
+<div class="container-fluid msk-page-center">
+	<div class="col-sm-8 msk-align">
+		<div class="home-caption">
+			<img src="../../../resources/images/logo.png"
+				alt="Course Management System">
+		</div>
+	</div>
+	<div class="col-sm-4">
+		<form class="msk-main-form">
+			<div class="home-caption">Register</div>
+			<div class="msk-form">
+				<label for="username">Username</label> <input
+					ng-model="newuser.username" type="text" id="username"
+					class="form-control" placeholder="Enter a Username" /> <label
+					for="firstname">Name</label> <input ng-model="newuser.name"
+					type="text" id="name" class="form-control" placeholder="Your Name" />
+				<label for="email">Email</label> <input ng-model="newuser.email"
+					type="text" id="email" class="form-control"
+					placeholder="Your Email" /> <label for="password">Password</label>
+				<input ng-model="newuser.password" type="password" id="password"
+					class="form-control" placeholder="Set a password" />
+
+				<div class="row">
+					<div class="col-xs-3">
+						<div class="radio">Join as:</div>
+					</div>
+					<div class="col-xs-3">
+						<div class="radio">
+							<label><input id="student" type="radio" name="user"
+								checked="">Student</label>
+						</div>
+					</div>
+					<div class="col-xs-3">
+						<div class="radio">
+							<label><input id="faculty" type="radio" name="user">Faculty</label>
+						</div>
+					</div>
+					
+				</div>
+
+				<br> <a class="btn btn-success pc-btn btn-block"
+					ng-click="model.signup(newuser)">Sign Up</a>
+			</div>
+		</form>
+	</div>
+</div>
+
+<script>
+	$("#login-form").validate();
+</script>

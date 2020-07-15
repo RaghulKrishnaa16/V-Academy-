@@ -1,0 +1,99 @@
+#main-navbar {
+    font-family: 'Montserrat', sans-serif !important;
+    background-color: #ccc;
+    font-weight: 900;
+    transition: background-color 700ms linear !important;
+    min-height: 75px !important;
+}
+
+#main-navbar a {
+    font-size: 1.2em !important;
+    color: white !important;
+}
+
+#main-navbar a:hover{
+    #background-color: transparent;
+
+}
+
+.msk-side-bar{
+    font-size: 1.2em !important;
+    padding-top: 15vh;
+}
+
+.msk-side-bar>li>a{
+    color: #f7f9fb;
+}
+.msk-side-bar>li>a:hover,.msk-side-bar>li>a:focus,
+.msk-side-bar>li>a:active{
+    background-color: #1b6d85;
+}
+
+a.list-group-item:hover,a.list-group-item:focus,
+a.list-group-item:active{
+    background-color: transparent;
+    color: #1b6d85;
+}
+
+.msk-list-group>a{
+    background-color: #353a40;
+    border: none;
+    color: #bfc8d0;
+}
+
+.msk-list-group{
+    margin-left: 20px;
+}
+
+.msk-navbar{
+    margin-top: 10px;
+}
+
+.icon-bar {
+    background-color: white !important;
+    display: block;
+    width: 25px !important;
+    height: 2px !important;
+    border-radius: 10px !important;
+}
+
+.navbar-collapse.in {
+    overflow: hidden;
+    max-height: none !important;
+    height: auto !important;
+}
+
+#pc-logo {
+    height: 55px;
+    margin-left: 15px;
+    margin-top: 10px;
+}
+
+@media only screen and (max-width: 767px) {
+    .nav>li>a:hover {
+        border-bottom: none;
+    }
+    .nav .open>a {
+        border-bottom: none !important;
+    }
+}
+
+@media only screen and (min-width: 768px) {
+    li li {
+        font-size: 1.6rem !important;
+    }
+}
+
+.table-responsive {
+    border: none;
+}
+
+.navbar-toggle:hover, .navbar-toggle:focus {
+    background-color: #f5c6cb !important;
+    opacity: 0.5 !important;
+}
+
+.navbar-toggle {
+    border: 1px white solid;
+    margin-top: 17px;
+}

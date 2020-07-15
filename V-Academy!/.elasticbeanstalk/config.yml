@@ -1,0 +1,9 @@
+branch-defaults:
+  master:
+    environment: cs5200-course-manager-env
+global:
+  application_name: cs5200-spring2018-kar
+  default_platform: Tomcat 8 with Java 8 running on 64bit Amazon Linux/2.7.7
+  default_region: us-east-1
+  artifact: cs5200-course-mgmt-system-0.0.1-SNAPSHOT.war
+  sc: gi
